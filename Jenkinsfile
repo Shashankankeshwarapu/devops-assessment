@@ -15,7 +15,7 @@ mvn clean install'''
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'sudo docker build -t shash29/my-app .'
+                    sh 'docker build -t shash29/my-app .'
                 }
             }
         }
