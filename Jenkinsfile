@@ -22,7 +22,7 @@ mvn clean install'''
         stage('Push image to hub'){
             steps{
                 script{
-                    withCredentials([usernameColonPassword(credentialsId: '2b240a19-04c5-4374-9f0e-60f82e7a8861', variable: 'Dockerhub')]) {
+                    withCredentials([usernamePassword(credentialsId: '66e53560-b704-4f33-9294-e70531251b31', passwordVariable: 'pwd', usernameVariable: 'shash29')]) {
                     sh 'docker login -u shash29 -p ${Dockerhub}'
                         
                     }
